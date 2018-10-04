@@ -17,3 +17,17 @@ Docker run -p 8080:8080 <image id>
 ```
 java -jar build/libs/package-indexer-0.0.1-SNAPSHOT.jar
 ```
+
+### Client Connection
+- Use netcat to connect to Server
+```
+nc localhost 8080
+```
+### Client Request
+1. INDEX|package_name|dependencies
+    - denpencies can be empty, separate multiple dependencies by comma ","
+    - ```INDEX|aa|bb,cc```
+1. QUERY|package_name|
+    - ```QUERY|aa|```
+1. REMOVE|package_name|
+    - ```REMOVE|aa|```
